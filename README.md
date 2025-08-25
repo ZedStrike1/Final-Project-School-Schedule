@@ -1,21 +1,59 @@
-# Final Project - School Schedule Bot
+# Bot Jadwal Sekolah Discord
 
-## Deskripsi
-Bot Discord yang dirancang untuk membantu pengelolaan kegiatan sekolah.  
-Fitur utama meliputi absensi, pengecekan jadwal, PR, dan event, serta pengaturan jadwal khusus oleh admin.  
-Bot ini memanfaatkan **Database** agar data bisa diubah oleh admin dan **Time** untuk sistem absensi maupun jadwal khusus.  
+Bot ini dirancang untuk mengelola dan menampilkan **jadwal sekolah** lengkap dengan pelajaran, jam, seragam, PR, dan catatan harian. Bot menggunakan **discord.py** dan **SQLite** sebagai database.
 
-## Alat yang digunakan
-- **Bot Discord** (discord.py)
-- **Database** (untuk menyimpan dan mengubah jadwal, PR, event)
-- **Time** (untuk penjadwalan otomatis dan absensi harian)
+---
 
-## Fitur Utama
-- `!info` → Menampilkan daftar command yang tersedia (dilengkapi button untuk penjelasan fungsi).
-- `!absen` → Siswa bisa melakukan absensi harian berdasarkan waktu.
-- `!jadwal` → Menampilkan jadwal sekolah hari Senin–Jumat (menggunakan button untuk navigasi).
-- `!pr` → Menampilkan daftar PR yang ada.
-- `!event` → Menampilkan daftar event yang ada.
-- `!yjadwal` → Khusus admin, mengubah jadwal.
-- `!ypr` → Khusus admin, menambahkan/menginfokan PR.
-- `!yevent` → Khusus admin, menambahkan/menginfokan event
+## Fitur
+
+1. **Lihat Jadwal Interaktif**
+   - Command: `!lihatJadwal`
+   - Menampilkan tombol per hari (Senin–Jumat)
+   - Menampilkan:
+     - Pelajaran
+     - Jam
+     - Seragam
+     - PR
+     - Catatan
+
+2. **Admin Commands**
+   - `!addPelajaran <hari_id> <pelajaran>` → Tambah pelajaran per hari
+   - `!addSeragam <hari_id> <seragam>` → Tambah/ubah seragam
+   - `!addJam <hari_id> <jam>` → Tambah/ubah jam
+   - `!addPR <hari_id> <isi>` → Tambah PR
+   - `!addCatatan <hari_id> <isi>` → Tambah catatan
+   - `!hapusPR <id>` → Hapus PR berdasarkan ID
+   - `!hapusCatatan <id>` → Hapus catatan berdasarkan ID
+
+3. **Informasi Bot**
+   - `!start` → Menjelaskan fungsi bot, meminta user ketik `!info`
+   - `!info` → Menampilkan daftar command bot
+
+---
+
+## Struktur Database
+
+- **jadwal**  
+  - `hari_id` INTEGER PRIMARY KEY  
+  - `pelajaran` TEXT  
+  - `jam` TEXT  
+  - `seragam` TEXT
+
+- **jadwal_pr**  
+  - `id` INTEGER PRIMARY KEY AUTOINCREMENT  
+  - `hari_id` INTEGER  
+  - `isi` TEXT
+
+- **jadwal_catatan**  
+  - `id` INTEGER PRIMARY KEY AUTOINCREMENT  
+  - `hari_id` INTEGER  
+  - `isi` TEXT
+
+---
+
+## Instalasi
+
+1. Install Python 3.11+  
+2. Install library:  
+```bash
+pip install discord.py
