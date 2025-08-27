@@ -13,16 +13,13 @@ Bot ini dirancang untuk mengelola dan menampilkan **jadwal sekolah** lengkap den
      - Pelajaran
      - Jam
      - Seragam
-     - PR
      - Catatan
 
 2. **Admin Commands**
    - `!addPelajaran <hari_id> <pelajaran>` → Tambah pelajaran per hari
    - `!addSeragam <hari_id> <seragam>` → Tambah/ubah seragam
    - `!addJam <hari_id> <jam>` → Tambah/ubah jam
-   - `!addPR <hari_id> <isi>` → Tambah PR
    - `!addCatatan <hari_id> <isi>` → Tambah catatan
-   - `!hapusPR <id>` → Hapus PR berdasarkan ID
    - `!hapusCatatan <id>` → Hapus catatan berdasarkan ID
 
 3. **Informasi Bot**
@@ -38,11 +35,6 @@ Bot ini dirancang untuk mengelola dan menampilkan **jadwal sekolah** lengkap den
   - `pelajaran` TEXT  
   - `jam` TEXT  
   - `seragam` TEXT
-
-- **jadwal_pr**  
-  - `id` INTEGER PRIMARY KEY AUTOINCREMENT  
-  - `hari_id` INTEGER  
-  - `isi` TEXT
 
 - **jadwal_catatan**  
   - `id` INTEGER PRIMARY KEY AUTOINCREMENT  
