@@ -44,4 +44,5 @@ Bot ini dirancang untuk mengelola dan menampilkan **jadwal sekolah** lengkap den
 ---
 
 ## Catatan
- <hari_id> 1 = Senin, 2 = Selasa... 5 = Jumat.
+<hari_id> adalah integer dari hari.
+ 1 = Senin, 2 = Selasa... 5 = Jumat.
