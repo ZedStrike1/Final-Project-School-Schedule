@@ -16,6 +16,7 @@ Bot ini dirancang untuk mengelola dan menampilkan **jadwal sekolah** lengkap den
      - Catatan
 
 2. **Admin Commands**
+   Catatan: `<hari_id>` 1 = Senin, 2 = Selasa... 5 = Jumat.
    - `!addPelajaran <hari_id> <pelajaran>` → Tambah pelajaran per hari
    - `!addSeragam <hari_id> <seragam>` → Tambah/ubah seragam
    - `!addJam <hari_id> <jam>` → Tambah/ubah jam

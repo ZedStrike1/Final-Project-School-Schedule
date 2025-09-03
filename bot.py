@@ -60,6 +60,7 @@ async def info(ctx):
             "**Command untuk Murid:**\n"
             "`!lihatJadwal` - Lihat jadwal interaktif per hari.\n\n"
             "**Command untuk Guru (Admin):**\n"
+            "Catatan: `<hari_id>` 1 = Senin, 2 = Selasa... 5 = Jumat.\n"
             "`!addPelajaran <hari_id> <pelajaran>` - Tambah pelajaran.\n"
             "`!addSeragam <hari_id> <seragam>` - Tambah atau ubah seragam.\n"
             "`!addJam <hari_id> <jam>` - Tambah atau ubah jam.\n"
